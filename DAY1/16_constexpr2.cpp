@@ -1,7 +1,7 @@
 // constexpr 용도 
-// 1. constexpr 상수
-// 2. constexpr 함수
-// 3. constexpr if
+// 1. constexpr 상수 - C++11
+// 2. constexpr 함수 - C++11
+// 3. constexpr if   - C++17
 
 int main()
 {
