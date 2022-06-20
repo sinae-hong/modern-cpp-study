@@ -25,6 +25,10 @@ public:
 	{
 		// 복잡한 초기화 코드
 	}
+	
+	void init()
+	{
+	}
 };
 
 int main()
