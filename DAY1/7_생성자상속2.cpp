@@ -1,9 +1,12 @@
 #include <list>
+#include <iostream>
 
 // STL 에서 상속받는것은 좋은 코드는 아닙니다.
 class MyList : public std::list<int>
 {
 public:
+	~MyList() {	std::cout << "~MyList" << std::endl;}
+
 	void debug() {}  
 
 	//C++98 시절의 코드
@@ -22,6 +25,12 @@ int main()
 	MyList st1(10, 3); // 10개를 3으로 초기화
 	MyList st2(10);
 	MyList st3 = { 1,2,3 }; // 
+
+	std::list<int>* p = new MyList;
+	delete p; //  버그 MyList 소멸자 호출 안됨
+
+//	Base* p = new Derived;
+//	delete p; // 이순간 Derived의 소멸자가 호출되려면 Base의 소멸자가 가상함수이어야한다
 }
 
 
