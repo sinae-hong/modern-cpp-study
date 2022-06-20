@@ -32,4 +32,8 @@ int main()
 
 //	auto sz1 = v.size(); // 배열은 지원 안됨
 	auto sz2 = std::size(v); // 배열도 가능.
+
+	// 참고, C++20 부터는 반복자를 꺼내는 새로운 함수 등장
+//	auto p3 = std::ranges::begin(v); // ok.. std::begin() 보다 안전
+									// => 금요일 오후에 소개
 }
