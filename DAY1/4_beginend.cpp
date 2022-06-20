@@ -29,4 +29,7 @@ int main()
 	//	  멤버 함수 보다 일반함수 "begin" 이 좋다
 	auto p1 = std::begin(v);
 	auto p2 = std::end(v);  // v 가 raw array 인 경우는 "int* p2"
+
+//	auto sz1 = v.size(); // 배열은 지원 안됨
+	auto sz2 = std::size(v); // 배열도 가능.
 }
