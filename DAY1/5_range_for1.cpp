@@ -11,9 +11,12 @@ int main()
 	{
 	}
 
-	// C++11 의 새로운 for 문
-	for (int e : v )
+	// C++11 의 새로운 for 문 - range for
+//	for (int   e : v )
+//	for (auto  e : v)
+	for (auto& e : v) // STL 컨테이너 뿐 아니라 배열도 가능
 	{
+		e = 0; // 이렇게 수정하려면 reference로!
 		std::cout << e << ", ";
 	}
 	std::cout << std::endl;
