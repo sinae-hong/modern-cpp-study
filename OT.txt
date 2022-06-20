@@ -1,0 +1,25 @@
+MODERN C++ 과정입니다
+
+강석민 강사 ( smkang@codenuri.co.kr )
+
+오전 강의 : 08:30 ~ 12:20
+점심 시간 : 12:20 ~ 13:50
+오후 강의 : 13:50 ~ 17:20
+
+1. https://github.com/codenuri/ssmoderncpp 에서 "DAY1.zip" 받아두세요
+
+2. www.isocpp.org   접속해 보세요
+   godbolt.org     접속해 보세요
+   cppinsights.io
+   cppreference.com
+
+   youtube 에서 "cppcon"
+
+
+
+
+
+
+
+
+ 
