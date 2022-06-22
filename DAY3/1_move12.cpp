@@ -1,9 +1,12 @@
 #include <iostream>
 #include <vector>
 #include <string>
-
+// cppreference.com 에서 "string" 검색
+template<typename T>
 class Object
 {
+	std::string name;
+	T data;
 public:
 	Object() {}
 
@@ -12,7 +15,14 @@ public:
 	// move 계열 함수를 만들때는(move 생성자, move 대입연산자)
 	// 되도록 예외 없이 만들고,
 	// 예외가 없다고, 컴파일러에게 알려 주세요
-	Object(Object&&) noexcept
+
+	// f() noexcept        : 예외가 없다.
+	// f() noexcept(true)  : 예외가 없다.
+	// f() noexcept(false) : 예외가 있다
+	// std::is_nothrow_move_constructible<T>::value : T 타입의 move 생성자가 예외가 있는지
+	//													없는지 조사.
+	Object(Object&& obj) noexcept( std::is_nothrow_move_constructible<T>::value  )
+		: name( std::move(obj.name) ), data( std::move(obj.data))
  	{
 		std::cout << "move" << std::endl;
 	}
