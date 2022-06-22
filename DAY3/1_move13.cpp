@@ -22,6 +22,7 @@ int main()
 
 	// string의 move 생성자 모양 : string(string&&) {}			1
 	// string의 copy 생성자 모양 : string(const string&) {}		2
+	// string(const string&&) {} 이버전을 만들어서 예외를 던질수도 있습니다
 
 	std::cout << s1 << std::endl;
 
