@@ -27,6 +27,11 @@ void chronometry(F f, T&& arg)
 
 	f( std::forward<T>(arg) ); //이 코드가 위와 동일합니다.(위처럼 캐스팅)
 								// T&& 가 아니라 T만 전달하면 됩니다.
+
+	// 꼭 기억할것
+	// std::move    : 항상 rvalue 로 캐스팅
+	// std::forward : 상황에 따라 다른 캐스팅
+	//				 lvalue 를 lvalue 로 rvalue 를 rvalue 로!
 }
 int main()
 {
