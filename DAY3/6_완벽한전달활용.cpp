@@ -38,6 +38,8 @@ int main()
 
 // 1. vector<int> v 같이 primitive 타입을 보관하면 그냥 push_back 하세요
 //   => v.push_back(10);
+//   => v.emplace_back(10) 해도 전혀 상관없습니다.
+
 
 // 2. 사용자 정의 타입의 포인터를 보관하면 그냥 push_back 하세요
 //   vector<Point*> v;
