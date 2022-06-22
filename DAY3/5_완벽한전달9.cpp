@@ -1,4 +1,7 @@
 #include <iostream>
+#include <chrono>
+#include <thread>
+using namespace std::literals;
 
 class StopWatch
 {
@@ -14,7 +17,12 @@ public:
 		std::cout << "start - 현재 시간 출력" << std::endl; // 금요일 수업
 	}
 };
-int& f3(int a, int& r, double d) { r = 200; return r; }
+int& f3(int a, int& r, double d) 
+{
+	std::this_thread::sleep_for(5s);
+	r = 200;
+	return r; 
+}
 
 template<typename F, typename ... T>
 decltype(auto) chronometry(F f, T&& ... arg)
