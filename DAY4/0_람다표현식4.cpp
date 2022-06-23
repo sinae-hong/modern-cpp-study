@@ -25,6 +25,8 @@ int main()
 	// C++17 : 컴파일러 최적화 기술이 문법화 됨
 	//		  "Point pt(1,2)" 와 동일한 의미
 	//        "복사 생성자 생략 의무화" 라는 문법
+	//        Mandatory elision of copy/move operations
+	// 
 
 
 	// 람다표현식의 활용
