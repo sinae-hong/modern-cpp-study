@@ -29,6 +29,9 @@ int main()
 	};
 	auto ret1 = std::find_if(v.begin(), v.end(), CompilerGeneratedName(k) );
 
+	// 핵심 : 람다표현식은 
+	// 1. 함수객체를 만드는 표현식 입니다.(컴파일러가 클래스 생성)
+	// 2. 람다표현식의 최종 결과는 "임시객체(rvalue)" 입니다.
 
 }
 
