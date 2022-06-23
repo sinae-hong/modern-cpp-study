@@ -11,7 +11,7 @@ public:
 
 		// 멤버 데이타에 접근하려면 "this" 를 캡쳐하면 됩니다.
 //		auto f = [this](int a) { return a + data; };  // ok
-							// 정확히는 "this->data" 가 맞는 표기법이지만,, 위처럼해야 합니다.
+							// 정확히는 "this->data" 가 맞는 표기법이지만,, 위처럼해도 합니다.
 
 		auto f = [this](int a) { data = 100; return a + data; }; // ok
 
