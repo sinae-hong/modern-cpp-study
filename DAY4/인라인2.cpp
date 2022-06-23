@@ -21,5 +21,5 @@ bool cmp2(int a, int b) { return a < b; }
 int main()
 {
 	int x[10] = { 1,3,5,7,9,2,4,6,8,10 };
-	sort(x, 10);
+	sort(x, 10, cmp1);
 }
