@@ -14,7 +14,7 @@ int main()
 
 	// 2. 동적 할당한 배열을 초기화 할수 없다.
 	// => 해결 {} 로!
-	int* p = int[3]{ 1,2,3 };
+	int* p = new int[3]{ 1,2,3 };
 }
 
 class Test
