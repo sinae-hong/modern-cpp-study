@@ -8,6 +8,7 @@ class Point
 public:
 	Point(int)      { std::cout << "int" << std::endl;	}		// 1
 	Point(int, int) { std::cout << "int, int" << std::endl; }	// 2
+	
 	Point(std::initializer_list<int> e)							// 3
 	{ std::cout << "initializer_list<int>" << std::endl; }
 };

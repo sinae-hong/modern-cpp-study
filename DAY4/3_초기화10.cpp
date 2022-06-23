@@ -17,8 +17,11 @@ int main()
 
 
 	// 아래 코드에서 에러는 ?
-	std::vector<int> v5 = 10;	// error  explicit vector(int sz)								
-	std::vector<int> v6 = {10}; // ok              vector(std::initalizer_list<int>)
+//	std::vector<int> v5 = 10;	// error  explicit vector(int sz)								
+//	std::vector<int> v6 = {10}; // ok              vector(std::initalizer_list<int>)
+
+
+//	std::initializer_list<int> e = { 1, 3.4 }; // error
 }
 
 
