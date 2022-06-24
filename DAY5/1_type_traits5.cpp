@@ -4,6 +4,7 @@
 // 표준  traits 를 사용하려면
 #include <type_traits>
 
+
 // C++14 부터 아래 도구가 지원 됩니다.
 template<typename T>
 using remove_pointer_t = typename std::remove_pointer<T>::type;
