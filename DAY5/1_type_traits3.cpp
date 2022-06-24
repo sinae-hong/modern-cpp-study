@@ -14,7 +14,7 @@ template<typename T> struct remove_pointer
 
 // 2. 조건을 만족하도록 부분 특수화 버전을 만들어서
 //    T* => T 와 * 로 분리한다.
-template<typename T> struct remove_pointer<T>
+template<typename T> struct remove_pointer<T*>
 {
 	using type = T;	
 };
