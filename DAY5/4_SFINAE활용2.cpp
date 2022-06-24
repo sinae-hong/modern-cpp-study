@@ -27,13 +27,24 @@ public:
 		: name(std::forward<T1>(s1)), addr(std::forward<T2>(s2))  // ok.. 정답!
 	{
 	}
+
+	// 아래 처럼 하기도 합니다.
+	template<typename T = std::enable_if_t<조건>,   // 또는
+			 std::enable_if_t<조건, int> = 0>
+// 
+//	조건이 참이면 "template<int N = 0>" 의 모양입니다.
+// 조건이 거짓이면 "template< enable_if<조건>::type = 0> 에서 "::type" 없으므로 실패
 };
+
+
 int main()
 {
 	std::vector<int> v;
 	std::string s1 = "kim";
 //	People p1(s1, s1);
 	People p1(s1, v);
+
+	std::pair<int, int> p;
 }
 
 
