@@ -41,7 +41,7 @@ T&& move(T&& obj)
 
 // 아래코드가 std::move 의 원리 입니다.
 template<typename T>
-std::remove_reference_t<T>&& move(T&& obj)
+[[nodiscard]] constexpr std::remove_reference_t<T>&& move(T&& obj) noexcept
 {
 	return static_cast<std::remove_reference_t<T>&&>(obj); 
 }
