@@ -23,9 +23,9 @@ struct tuple<T, Types...>
 int main()
 {
 	tuple<> t0;
-	tuple<short> t1;
-	tuple<double, short> t2;
-	tuple<int, double, short> t3;
+	tuple<short> t1;		// short 한개 보관
+	tuple<double, short> t2;// double 한개 보관
+	tuple<int, double, short> t3; // int 한개 보관
 }
 
 
