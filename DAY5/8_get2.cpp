@@ -35,7 +35,7 @@ int main()
 	std::cout << static_cast<tuple<short> &>(t3).value << std::endl; // 2
 
 
-	int n = get<0>(t3);
+	auto n = get<2>(t3);
 }
 template<int N, typename TP>
 N번째 요소 타입&
@@ -44,5 +44,8 @@ get(TP& tp)
 	return static_cast<N번째기반클래스타입&>(tp).value;
 }
 
+// 결론 get를 만들려면, 임의 tuple의
+// 1. N번째 요소의 타입을 구할수 있어야 하고
+// 2. N번째 기반 클래스 타입을 구할수 있어야 한다.
 
 
